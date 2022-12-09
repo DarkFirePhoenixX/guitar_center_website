@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dream Guitar Center</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <canvas id="canvas"></canvas>
+    <body class="override-modal-open">
+        <!-- Начало на хедър бар -->
+        <div class="container-fluid">
+            <div class="row bg-secondary py-2 px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="contact.html">ЧЗВ</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="contact.html">Помощ</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="contact.html">Връзка с нас</a>
+                    </div>
+                </div>
+                <section class="light-bulbs col-lg-7">
+                    <div class="light-bulb theme-color-one"></div>
+                    <div class="light-bulb theme-color-two"></div>
+                    <div class="light-bulb theme-color-three"></div>
+                    <div class="light-bulb theme-color-four"></div>
+                    <div class="light-bulb theme-color-five"></div>
+                    <div class="light-bulb theme-color-one"></div>
+                    <div class="light-bulb theme-color-two"></div>
+                    <div class="light-bulb theme-color-three"></div>
+                    <div class="light-bulb theme-color-four"></div>
+                    <div class="light-bulb theme-color-five"></div>
+                    <div class="light-bulb theme-color-one"></div>
+                </section>
+                <div class="col-lg-2 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark px-2 enlarge" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-2 enlarge" href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-2 enlarge" href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center py-3 px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a href="index.html" class="text-decoration-none">
+                        <h1 class="m-0 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-6 text-left">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Търсене в сайта">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-transparent text-primary">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-6 text-right">
+                    <a href="account.html" class="btn border btn-outline-secondary">
+                        <i class="fas fa-user text-primary"></i>
+                        <span class="badge text-dark">Моят профил</span>
+                    </a>
+                    <a href="cart.html" class="btn border btn-outline-secondary">
+                        <i class="fas fa-shopping-cart text-primary"></i>
+                        <span class="badge text-dark">6</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Край на хедър бар -->
+        <!-- Начало на навигационна лента -->
+        <div class="container-fluid">
+            <div class="row border-top px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                        <h6 class="m-0">Категории</h6>
+                        <i class="fa fa-angle-down text-dark"></i>
+                    </a>
+                    <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
+                        <div class="navbar-nav w-100 overflow-hidden" style="height: 203px">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-toggle="dropdown">Електрически китари <i class="fa fa-angle-down float-right mt-1"></i></a>
+                                <div class="dropdown-menu position-absolute bg-white border-1 rounded-0 w-100 m-0">
+                                    <a href="" class="dropdown-item border border-top-0 border-bottom-1">6 Струнни китари</a>
+                                    <a href="" class="dropdown-item border border-top-0 border-bottom-1">7 Струнни китари</a>
+                                    <a href="" class="dropdown-item">8 Струнни китари</a>
+                                </div>
+                            </div>
+                            <a href="" class="nav-item nav-link">Акустични китари</a>
+                            <a href="" class="nav-item nav-link">Бас китари</a>
+                            <a href="" class="nav-item nav-link">Усилватели за китара</a>
+                            <a href="" class="nav-item nav-link">Аксесоари</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9">
+                    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                        <a href="" class="text-decoration-none d-block d-lg-none">
+                            <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="index.html" class="nav-item nav-link">Начало</a>
+                                <a href="shop.html" class="nav-item nav-link">Магазин</a>
+                                <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                                <a href="aboutus.html" class="nav-item nav-link">За нас</a>
+                            </div>
+                            <div class="navbar-nav ml-auto py-0">
+                                <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#FormCenter">Вход</a>
+                                <div class="modal fade" id="FormCenter" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle">Вход</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашата парола</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body mt-3">Влез</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0">Забравена парола? <a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter2"><u>Възстановяване на паролата</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="FormCenter2" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle2" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle2">Възстановяване парола</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body">Изпрати</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0"><a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter"><u>Назад</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#FormCenter1">Регистрация</a>
+                                <div class="modal fade" id="FormCenter1" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle1">Вход</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="text" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашето име</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашата парола</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Повторете паролата</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body mt-3">Регистрирай се</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0">Вече имате акаунт? <a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter"><u>Влезте тук</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Край на навигационна лента -->
+        <!-- Начало на хедър на основното съдържание -->
+        <div class="container-fluid bg-secondary mb-5">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+                <h1 class="font-weight-semi-bold text-uppercase mb-3">Профил</h1>
+                <div class="d-inline-flex">
+                    <p class="m-0"><div class="text-primary">Dream Guitar Center</div></p>
+                    <p class="m-0 px-2">-</p>
+                    <p class="m-0">Настройки на профила</p>
+                </div>
+            </div>
+        </div>
+        <!-- Край на хедър на основното съдържание -->
+        <!-- Начало на форма за доставка -->
+        <div class="container-fluid pt-5">
+            <div class="row px-xl-5">
+                <div class="col-lg-8">
+                    <div class="mb-4">
+                        <h4 class="font-weight-semi-bold mb-4">Промяна на данни за доставка</h4>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>Име</label>
+                                <input class="form-control" type="text" placeholder="Иван">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Фамилия</label>
+                                <input class="form-control" type="text" placeholder="Иванов">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Имейл</label>
+                                <input class="form-control" type="text" placeholder="ivan@email.com">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Телефонен номер</label>
+                                <input class="form-control" type="text" placeholder="+359 00000000">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Адрес 1</label>
+                                <input class="form-control" type="text" placeholder="ул. Красна Поляна №23">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Адрес 2</label>
+                                <input class="form-control" type="text" placeholder="ап. 1, етаж 2">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Страна</label>
+                                <select class="custom-select">
+                                    <option selected>България</option>
+                                    <option>Гърция</option>
+                                    <option>Албания</option>
+                                    <option>Румъния</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Град</label>
+                                <input class="form-control" type="text" placeholder="София">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Област</label>
+                                <input class="form-control" type="text" placeholder="София">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Пощенски код</label>
+                                <input class="form-control" type="text" placeholder="1000">
+                            </div>
+                        </div>
+                        <form>
+                            <h4 class="font-weight-semi-bold my-4">Промяна на парола/потребителско име</h4>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label>Потребителско име</label>
+                                    <input class="form-control" type="text" placeholder="ivan2399" required="yes">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label>Стара парола</label>
+                                    <input class="form-control" type="password" placeholder="**********" required="yes">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label>Нова парола</label>
+                                    <input class="form-control" type="password" placeholder="**********" required="yes">
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label>Повторете паролата</label>
+                                    <input class="form-control" type="password" placeholder="**********" required="yes">
+                                </div>
+                            </div>
+                            <button class="btn btn-lg btn-block btn-primary font-weight-bold px-4 mt-3">Редактирай данни</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-secondary mb-5">
+                        <div class="card-header bg-secondary border-0">
+                            <h4 class="font-weight-semi-bold m-0">Вашите поръчки</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="order1">
+                                <label class="custom-control-label" for="order1" data-toggle="collapse" data-target="#order1"><h5>Поръчка №218378 - 12.11.2022</h5></label>
+                            </div>
+                            <div class="collapse" id="order1">
+                                <h5 class="font-weight-medium my-3">Детайли:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Акустична китара Fender BN100</p>
+                                    <p>199.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрическа китара Ibanez RG-421</p>
+                                    <p>599.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрически бас Ibanez DR-22</p>
+                                    <p>499.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Усилвател Marshall BX-30</p>
+                                    <p>639.98 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Усилвател Fender 15MX</p>
+                                    <p>219.99 лв.</p>
+                                </div>
+                                <hr class="mt-0">
+                                <div class="d-flex justify-content-between pt-1">
+                                    <h6 class="font-weight-bold">Сума</h6>
+                                    <h6 class="font-weight-bold">2159.94 лв.</h6>
+                                </div>
+                                <h5 class="font-weight-medium my-3">Данни за доставка:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Иван Иванов, България, гр. София, пк. 1000, ул. Красна Поляна №23, ап.1 ет. 2, +359 00000000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="order2">
+                                <label class="custom-control-label" for="order2" data-toggle="collapse" data-target="#order2"><h5>Поръчка №23901 - 18.11.2022</h5></label>
+                            </div>
+                            <div class="collapse" id="order2">
+                                <h5 class="font-weight-medium my-3">Детайли:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Акустична китара Fender BN100</p>
+                                    <p>199.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрическа китара Ibanez RG-421</p>
+                                    <p>599.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрически бас Ibanez DR-22</p>
+                                    <p>499.99 лв.</p>
+                                </div>
+                                <hr class="mt-0">
+                                <div class="d-flex justify-content-between pt-1">
+                                    <h6 class="font-weight-bold">Сума</h6>
+                                    <h6 class="font-weight-bold">1299.97 лв.</h6>
+                                </div>
+                                <h5 class="font-weight-medium my-3">Данни за доставка:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Иван Иванов, България, гр. София, пк. 1000, ул. Красна Поляна №23, ап.1 ет. 2, +359 00000000</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="order3">
+                                <label class="custom-control-label" for="order3" data-toggle="collapse" data-target="#order3"><h5>Поръчка №23922 - 03.12.2022</h5></label>
+                            </div>
+                            <div class="collapse" id="order3">
+                                <h5 class="font-weight-medium my-3">Детайли:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Акустична китара Fender BN100</p>
+                                    <p>199.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрическа китара Ibanez RG-421</p>
+                                    <p>599.99 лв.</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p>Електрически бас Ibanez DR-22</p>
+                                    <p>499.99 лв.</p>
+                                </div>
+                                <hr class="mt-0">
+                                <div class="d-flex justify-content-between pt-1">
+                                    <h6 class="font-weight-bold">Сума</h6>
+                                    <h6 class="font-weight-bold">1299.97 лв.</h6>
+                                </div>
+                                <h5 class="font-weight-medium my-3">Данни за доставка:</h5>
+                                <div class="d-flex justify-content-between">
+                                    <p>Иван Иванов, България, гр. София, пк. 1000, ул. Красна Поляна №23, ап.1 ет. 2, +359 00000000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Край на форма за доставка -->
+        <!-- Начало на футър -->
+        <div class="container-fluid bg-secondary text-dark pt-3">
+            <div class="row px-xl-5 pt-5">
+                <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                    <a href="" class="text-decoration-none">
+                        <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                    </a>
+                    <p>Свържете се с нас:</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>гр. София, бул. "Патриарх Евтимий" №98</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@dream-guitarcenter.com</p>
+                    <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+359 88 234411</p>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 mb-5">
+                            <h5 class="font-weight-bold text-dark mb-4">Бързи връзки</h5>
+                            <div class="d-flex flex-column justify-content-start">
+                                <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Начало</a>
+                                <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Помощ</a>
+                                <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Контакти</a>
+                                <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>ЧЗВ</a>
+                                <a class="text-dark" href="aboutus.html"><i class="fa fa-angle-right mr-2"></i>За нас</a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 mb-5">
+                            <h5 class="font-weight-bold text-dark mb-4">Бъдете информирани за последните новини, промоции и продукти</h5>
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 py-4" placeholder="Вашето име" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 py-4" placeholder="Вашият имейл"
+                                    required="required" />
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-block border-0 py-3" type="submit">Запиши ме</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-md-2 text-md-left text-dark">
+                    &copy; <span class="text-dark font-weight-semi-bold" href="#">2022 Dream Guitar Center</span>. Всички права запазени.
+                </p>
+            </div>
+        </div>
+        <!-- Край на футър -->
+        <!-- Бутон за връщане най-горе в страницата -->
+        <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

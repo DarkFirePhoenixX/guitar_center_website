@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dream Guitar Center</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <canvas id="canvas"></canvas>
+    <body class="override-modal-open">
+        <!-- Начало на хедър бар -->
+        <div class="container-fluid">
+            <div class="row bg-secondary py-2 px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark" href="contact.html">ЧЗВ</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="contact.html">Помощ</a>
+                        <span class="text-muted px-2">|</span>
+                        <a class="text-dark" href="contact.html">Връзка с нас</a>
+                    </div>
+                </div>
+                <section class="light-bulbs col-lg-7">
+                    <div class="light-bulb theme-color-one"></div>
+                    <div class="light-bulb theme-color-two"></div>
+                    <div class="light-bulb theme-color-three"></div>
+                    <div class="light-bulb theme-color-four"></div>
+                    <div class="light-bulb theme-color-five"></div>
+                    <div class="light-bulb theme-color-one"></div>
+                    <div class="light-bulb theme-color-two"></div>
+                    <div class="light-bulb theme-color-three"></div>
+                    <div class="light-bulb theme-color-four"></div>
+                    <div class="light-bulb theme-color-five"></div>
+                    <div class="light-bulb theme-color-one"></div>
+                </section>
+                <div class="col-lg-2 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark px-2 enlarge" href="https://www.facebook.com/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-2 enlarge" href="https://twitter.com/" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-2 enlarge" href="https://www.instagram.com/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center py-3 px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a href="index.html" class="text-decoration-none">
+                        <h1 class="m-0 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-6 text-left">
+                    <form action="">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Търсене на продукт">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-transparent text-primary">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-6 text-right">
+                    <a href="account.html" class="btn border btn-outline-secondary">
+                        <i class="fas fa-user text-primary"></i>
+                        <span class="badge text-dark">Моят профил</span>
+                    </a>
+                    <a href="cart.html" class="btn border btn-outline-secondary">
+                        <i class="fas fa-shopping-cart text-primary"></i>
+                        <span class="badge text-dark">6</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Край на хедър бар -->
+        <!-- Начало на навигационна лента -->
+        <div class="container-fluid">
+            <div class="row border-top px-xl-5">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                        <h6 class="m-0">Категории</h6>
+                        <i class="fa fa-angle-down text-dark"></i>
+                    </a>
+                    <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light" id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
+                        <div class="navbar-nav w-100 overflow-hidden" style="height: 203px">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-toggle="dropdown">Електрически китари <i class="fa fa-angle-down float-right mt-1"></i></a>
+                                <div class="dropdown-menu position-absolute bg-white border-1 rounded-0 w-100 m-0">
+                                    <a href="" class="dropdown-item border border-top-0 border-bottom-1">6 Струнни китари</a>
+                                    <a href="" class="dropdown-item border border-top-0 border-bottom-1">7 Струнни китари</a>
+                                    <a href="" class="dropdown-item">8 Струнни китари</a>
+                                </div>
+                            </div>
+                            <a href="" class="nav-item nav-link">Акустични китари</a>
+                            <a href="" class="nav-item nav-link">Бас китари</a>
+                            <a href="" class="nav-item nav-link">Усилватели за китара</a>
+                            <a href="" class="nav-item nav-link">Аксесоари</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9">
+                    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                        <a href="" class="text-decoration-none d-block d-lg-none">
+                            <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="index.html" class="nav-item nav-link">Начало</a>
+                                <a href="shop.html" class="nav-item nav-link active">Магазин</a>
+                                <a href="contact.html" class="nav-item nav-link">Контакти</a>
+                                <a href="aboutus.html" class="nav-item nav-link">За нас</a>
+                            </div>
+                            <div class="navbar-nav ml-auto py-0">
+                                <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#FormCenter">Вход</a>
+                                <div class="modal fade" id="FormCenter" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle">Вход</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашата парола</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body mt-3">Влез</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0">Забравена парола? <a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter2"><u>Възстановяване на паролата</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="FormCenter2" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle2" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle2">Възстановяване парола</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body">Изпрати</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0"><a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter"><u>Назад</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#FormCenter1">Регистрация</a>
+                                <div class="modal fade" id="FormCenter1" tabindex="-1" role="dialog" aria-labelledby="FormCenterTitle1" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-primary">
+                                                <h4 class="modal-title" id="FormLongTitle1">Вход</h4>
+                                                <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-outline my-4">
+                                                        <input type="text" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашето име</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="email" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашият имейл</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Вашата парола</label>
+                                                    </div>
+                                                    <div class="form-outline mb-4">
+                                                        <input type="password" id="register-from" required="yes" class="form-control form-control-lg" />
+                                                        <label class="form-label" for="register-from">Повторете паролата</label>
+                                                    </div>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button type="submit"
+                                                        class="btn btn-primary btn-block btn-lg  text-body mt-3">Регистрирай се</button>
+                                                    </div>
+                                                    <p class="text-center text-muted mt-5 mb-0">Вече имате акаунт? <a href="#!"
+                                                    class="fw-bold text-body" data-toggle="modal" data-dismiss="modal" data-target="#FormCenter"><u>Влезте тук</u></a></p>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer bg-primary py-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Край на навигационна лента -->
+        <!-- Начало на хедър на основното съдържание -->
+        <div class="container-fluid bg-secondary mb-5">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+                <h1 class="font-weight-semi-bold text-uppercase mb-3">Нашите продукти</h1>
+                <div class="d-inline-flex">
+                    <p class="m-0"><div class="text-primary">Dream Guitar Center</div></p>
+                    <p class="m-0 px-2">-</p>
+                    <p class="m-0">Магазин</p>
+                </div>
+            </div>
+        </div>
+        <!-- Край на хедър на основното съдържание -->
+        <!-- Начало на съдържание с продукти -->
+        <div class="container-fluid pt-5">
+            <div class="row px-xl-5">
+                <!-- Начало на странична лента за продукти -->
+                <div class="col-lg-3 col-md-12">
+                    <!-- Начало на списък с цени -->
+                    <div class="border-bottom mb-4 pb-4">
+                        <h5 class="font-weight-semi-bold mb-4">Филтрирай по цена</h5>
+                        <form>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" checked id="price-all">
+                                <label class="custom-control-label" for="price-all">Всички цени</label>
+                                <span class="badge border text-muted font-weight-normal">1000</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="price-1">
+                                <label class="custom-control-label" for="price-1">0 - 100 лв.</label>
+                                <span class="badge border text-muted font-weight-normal">150</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="price-2">
+                                <label class="custom-control-label" for="price-2">100 - 200 лв.</label>
+                                <span class="badge border text-muted font-weight-normal">295</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="price-3">
+                                <label class="custom-control-label" for="price-3">200 - 300 лв.</label>
+                                <span class="badge border text-muted font-weight-normal">246</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="price-4">
+                                <label class="custom-control-label" for="price-4">300 - 400 лв.</label>
+                                <span class="badge border text-muted font-weight-normal">145</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                                <input type="checkbox" class="custom-control-input" id="price-5">
+                                <label class="custom-control-label" for="price-5">400 - 500 лв.</label>
+                                <span class="badge border text-muted font-weight-normal">168</span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Край на списък с цени -->
+                    <!-- Начало на списък с цветове -->
+                    <div class="border-bottom mb-4 pb-4">
+                        <h5 class="font-weight-semi-bold mb-4">Филтрирай по производител</h5>
+                        <form>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" checked id="manufacturer-all">
+                                <label class="custom-control-label" for="manufacturer-all">Всички производители</label>
+                                <span class="badge border text-muted font-weight-normal">1000</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="manufacturer-1">
+                                <label class="custom-control-label" for="manufacturer-1">Ibanez</label>
+                                <span class="badge border text-muted font-weight-normal">150</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="manufacturer-2">
+                                <label class="custom-control-label" for="manufacturer-2">Gibson</label>
+                                <span class="badge border text-muted font-weight-normal">295</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="manufacturer-3">
+                                <label class="custom-control-label" for="manufacturer-3">Fender</label>
+                                <span class="badge border text-muted font-weight-normal">246</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                                <input type="checkbox" class="custom-control-input" id="manufacturer-4">
+                                <label class="custom-control-label" for="manufacturer-4">Stagg</label>
+                                <span class="badge border text-muted font-weight-normal">145</span>
+                            </div>
+                            <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                                <input type="checkbox" class="custom-control-input" id="manufacturer-5">
+                                <label class="custom-control-label" for="manufacturer-5">Yamaha</label>
+                                <span class="badge border text-muted font-weight-normal">168</span>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Край на списък с цветове -->
+                </div>
+                <!-- Край на странична лента за продукти -->
+                <!-- Начало на продукти -->
+                <div class="col-lg-9 col-md-12">
+                    <div class="row pb-3">
+                        <div class="col-12 pb-1">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <form action="">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Търсене на продукт">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text bg-transparent text-primary">
+                                                <i class="fa fa-search"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="dropdown ml-4">
+                                    <button class="btn border dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Покажи по
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+                                        <a class="dropdown-item" href="#">Най-нови</a>
+                                        <a class="dropdown-item" href="#">Най-популярни</a>
+                                        <a class="dropdown-item" href="#">Най-продавани</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <span class="badge bg-warning text-dark position-absolute rounded-0">Ново</span>
+                                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Акустична китара Fender BN100</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>199.99 лв.</h6><h6 class="text-muted ml-2"><del>223.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-1-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-1-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-1-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-1-ModalLongTitle">Продукт №31872</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-1.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Акустична китара Fender BN100</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>199.99 лв.</span><span class="text-muted ml-2"><del>223.99 лв.</del></span>
+                                                                    </div>
+                                                                    <p class="lead"><div><span class="font-weight-bold">Гриф:</span>   5pc Maple/Walnut</div>
+                                                                    <div><span class="font-weight-bold">Тяло:</span>   Basswood</div>
+                                                                    <div><span class="font-weight-bold">Позиционна дъска:</span>   Maple</div>
+                                                                    <div><span class="font-weight-bold">Прагове:</span>   Jumbo</div>
+                                                                    <div><span class="font-weight-bold">Брой прагове:</span>   24</div>
+                                                                    <div><span class="font-weight-bold">Бридж:</span>  Edge</div>
+                                                                    <div><span class="font-weight-bold">Разстояние между струните:</span>  10.8 mm</div>
+                                                                    <div><span class="font-weight-bold">Фабрични настройки: </span>    1E 2B 3G 4D 5A 6E</div>
+                                                                    <div><span class="font-weight-bold">Размер на струните:  </span>   .009/.011/.016/.024/.032/.042</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>   Gold</div></p>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <span class="badge bg-warning text-dark position-absolute rounded-0">Ново</span>
+                                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Електрическа китара Ibanez RG-421</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>599.99 лв.</h6><h6 class="text-muted ml-2"><del>729.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-2-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-2-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-2-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-2-ModalLongTitle">Продукт №37121</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-2.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Електрическа китара Ibanez RG-421</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>599.99 лв.</span><span class="text-muted ml-2"><del>729.99 лв.</del></span>
+                                                                    </div>
+                                                                    <p class="lead"><div><span class="font-weight-bold">Гриф:</span>   5pc Maple/Walnut</div>
+                                                                    <div><span class="font-weight-bold">Тяло:</span>   Basswood</div>
+                                                                    <div><span class="font-weight-bold">Позиционна дъска:</span>   Maple</div>
+                                                                    <div><span class="font-weight-bold">Прагове:</span>   Jumbo</div>
+                                                                    <div><span class="font-weight-bold">Брой прагове:</span>   24</div>
+                                                                    <div><span class="font-weight-bold">Бридж:</span>  Edge</div>
+                                                                    <div><span class="font-weight-bold">Разстояние между струните:</span>  10.8 mm</div>
+                                                                    <div><span class="font-weight-bold">Нек адаптер:</span>    Infinity R (Humbucker)</div>
+                                                                    <div><span class="font-weight-bold">Бридж адаптер:</span>  V8 (Humbucker)</div>
+                                                                    <div><span class="font-weight-bold">Фабрични настройки: </span>    1E 2B 3G 4D 5A 6E</div>
+                                                                    <div><span class="font-weight-bold">Размер на струните:  </span>   .009/.011/.016/.024/.032/.042</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>   Black</div></p>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <span class="badge bg-danger text-dark position-absolute rounded-0">Изгодна цена</span>
+                                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Електрически бас Ibanez DR-22</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>499.99 лв.</h6><h6 class="text-muted ml-2"><del>672.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-3-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-3-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-3-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-3-ModalLongTitle">Продукт №37119</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-3.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Електрически бас Ibanez DR-22</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>499.99 лв.</span><span class="text-muted ml-2"><del>672.99 лв.</del></span>
+                                                                    </div>
+                                                                    <p class="lead"><div><span class="font-weight-bold">Гриф:</span>   5pc Maple/Walnut</div>
+                                                                    <div><span class="font-weight-bold">Тяло:</span>   Basswood</div>
+                                                                    <div><span class="font-weight-bold">Позиционна дъска:</span>   Maple</div>
+                                                                    <div><span class="font-weight-bold">Прагове:</span>   Jumbo</div>
+                                                                    <div><span class="font-weight-bold">Брой прагове:</span>   24</div>
+                                                                    <div><span class="font-weight-bold">Бридж:</span>  Edge</div>
+                                                                    <div><span class="font-weight-bold">Разстояние между струните:</span>  10.8 mm</div>
+                                                                    <div><span class="font-weight-bold">Нек адаптер:</span>    Infinity R (Humbucker)</div>
+                                                                    <div><span class="font-weight-bold">Бридж адаптер:</span>  V8 (Humbucker)</div>
+                                                                    <div><span class="font-weight-bold">Фабрични настройки: </span>    1E 2B 3G 4D 5A 6E</div>
+                                                                    <div><span class="font-weight-bold">Размер на струните:  </span>   .009/.011/.016/.024/.032/.042</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>   Black</div></p>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Усилвател Marshall BX-30</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>319.99 лв.</h6><h6 class="text-muted ml-2"><del>399.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-4-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-4-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-4-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-4-ModalLongTitle">Продукт №398182</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-5.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Усилвател Marshall BX-30</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>219.99 лв.</span><span class="text-muted ml-2"><del>249.99 лв.</del></span>
+                                                                    </div>
+                                                                    <div><span class="font-weight-bold">Материал:</span>   Пластмаса</div>
+                                                                    <div><span class="font-weight-bold">Мощност:</span>   30W</div>
+                                                                    <div><span class="font-weight-bold">Размер:</span>   80x90x20 см</div>
+                                                                    <div><span class="font-weight-bold">Захранване:</span>   10V AC</div>
+                                                                    <div><span class="font-weight-bold">Говорители:</span>  2x 15W</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>  Черен</div>
+                                                                    <div><span class="font-weight-bold">Тип усилване:</span>  Активно</div>
+                                                                    <div><span class="font-weight-bold">Брой лампи</span> 0</div>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <span class="badge bg-warning text-dark position-absolute rounded-0">Ново</span>
+                                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Усилвател Fender 15MX</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>219.99 лв.</h6><h6 class="text-muted ml-2"><del>249.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-5-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-5-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-5-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-5-ModalLongTitle">Продукт №398181</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-5.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Усилвател Fender 15MX</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>219.99 лв.</span><span class="text-muted ml-2"><del>249.99 лв.</del></span>
+                                                                    </div>
+                                                                    <div><span class="font-weight-bold">Материал:</span>   Пластмаса</div>
+                                                                    <div><span class="font-weight-bold">Мощност:</span>   15W</div>
+                                                                    <div><span class="font-weight-bold">Размер:</span>   80x90x20 см</div>
+                                                                    <div><span class="font-weight-bold">Захранване:</span>   10V AC</div>
+                                                                    <div><span class="font-weight-bold">Говорители:</span>  2x 15W</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>  Черен</div>
+                                                                    <div><span class="font-weight-bold">Тип усилване:</span>  Активно</div>
+                                                                    <div><span class="font-weight-bold">Брой лампи</span> 0</div>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Кабел за китара Ibanez GDD 2M</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>14.99 лв.</h6><h6 class="text-muted ml-2"><del>21.99 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-6-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-6-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-6-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-6-ModalLongTitle">Продукт №318182</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-6.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Кабел за китара Ibanez GDD 2M</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>14.99 лв.</span><span class="text-muted ml-2"><del>21.99 лв.</del></span>
+                                                                    </div>
+                                                                    <div><span class="font-weight-bold">Материал:</span>   Силикон</div>
+                                                                    <div><span class="font-weight-bold">Дължина:</span>   2 метра</div>
+                                                                    <div><span class="font-weight-bold">Размер:</span>   1/2 "</div>
+                                                                    <div><span class="font-weight-bold">Цвят на хардуера:</span>  Позлатен</div>
+                                                                    <div><span class="font-weight-bold">Тип усилване:</span>  Активно</div>
+                                                                    <div class="d-flex mt-3">
+                                                                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                        <i class="bi-cart-fill me-1"></i>
+                                                                        Добави в количката
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer bg-primary py-4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                            <div class="card product-item border-0 mb-4">
+                                <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                    <span class="badge bg-warning text-dark position-absolute rounded-0">Ново</span>
+                                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
+                                </div>
+                                <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                    <h6 class="text-truncate mb-3">Перца за китара Dunlop SM USA</h6>
+                                    <div class="d-flex justify-content-center">
+                                        <h6>1.00 лв.</h6><h6 class="text-muted ml-2"><del>1.49 лв.</del></h6>
+                                    </div>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between bg-light border">
+                                    <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-7-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                    <div class="modal fade" id="product-7-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-7-ModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header bg-primary">
+                                                    <h4 class="modal-title" id="product-7-ModalLongTitle">Продукт №394421</h4>
+                                                    <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <section class="py-5">
+                                                        <div class="container px-4 px-lg-5 my-5">
+                                                            <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-7.jpg" alt="..." /></div>
+                                                                <div class="col-md-6">
+                                                                    <h1 class="display-5 fw-bolder">Перца за китара Dunlop SM USA</h1>
+                                                                    <div class="fs-5 mb-2">
+                                                                        <span>1.00 лв.</span><span class="text-muted ml-2"><del>1.49 лв.</del></span>
+                                                                    </div>
+                                                                    <div><span class="font-weight-bold">Материал:</span>   Пластмаса</div>
+                                                                    <div><span class="font-weight-bold">Дължина:</span>   3см</div>
+                                                                    <div><span class="font-weight-bold">Размер:</span>   0.5 мм</div>
+                                                                    <div><span class="font-weight-bold">Подходящ за:</span>  Електрическа китара</div>
+                                                                    <div class="d-flex mt-3">
+                                                                        <div class="d-flex">
+                                                                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                            <i class="bi-cart-fill me-1"></i>
+                                                                            Добави в количката
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="modal-footer bg-primary py-4">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                                <div class="card product-item border-0 mb-4">
+                                    <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                        <span class="badge bg-danger text-dark position-absolute rounded-0">Изгодна цена</span>
+                                        <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
+                                    </div>
+                                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                        <h6 class="text-truncate mb-3">Електрическа китара Ibanez BKN81</h6>
+                                        <div class="d-flex justify-content-center">
+                                            <h6>1199.99 лв.</h6><h6 class="text-muted ml-2"><del>1799.99 лв.</del></h6>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between bg-light border">
+                                        <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-8-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                        <div class="modal fade" id="product-8-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-8-ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header bg-primary">
+                                                        <h4 class="modal-title" id="product-8-ModalLongTitle">Продукт №258182</h4>
+                                                        <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <section class="py-5">
+                                                            <div class="container px-4 px-lg-5 my-5">
+                                                                <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-8.jpg" alt="..." /></div>
+                                                                    <div class="col-md-6">
+                                                                        <h1 class="display-5 fw-bolder">Електрическа китара Ibanez BKN81</h1>
+                                                                        <div class="fs-5 mb-2">
+                                                                            <span>1199.99 лв.</span><span class="text-muted ml-2"><del>1799.99 лв.</del></span>
+                                                                        </div>
+                                                                        <p class="lead"><div><span class="font-weight-bold">Гриф:</span>   5pc Maple/Walnut</div>
+                                                                        <div><span class="font-weight-bold">Тяло:</span>   Basswood</div>
+                                                                        <div><span class="font-weight-bold">Позиционна дъска:</span>   Maple</div>
+                                                                        <div><span class="font-weight-bold">Прагове:</span>   Jumbo</div>
+                                                                        <div><span class="font-weight-bold">Брой прагове:</span>   24</div>
+                                                                        <div><span class="font-weight-bold">Бридж:</span>  Edge</div>
+                                                                        <div><span class="font-weight-bold">Разстояние между струните:</span>  10.8 mm</div>
+                                                                        <div><span class="font-weight-bold">Нек адаптер:</span>    Infinity R (Humbucker)</div>
+                                                                        <div><span class="font-weight-bold">Бридж адаптер:</span>  V8 (Humbucker)</div>
+                                                                        <div><span class="font-weight-bold">Фабрични настройки: </span>    1E 2B 3G 4D 5A 6E</div>
+                                                                        <div><span class="font-weight-bold">Размер на струните:  </span>   .009/.011/.016/.024/.032/.042</div>
+                                                                        <div><span class="font-weight-bold">Цвят на хардуера:</span>   Black</div></p>
+                                                                        <div class="d-flex">
+                                                                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                            <i class="bi-cart-fill me-1"></i>
+                                                                            Добави в количката
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                    <div class="modal-footer bg-primary py-4">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 pb-1">
+                                <div class="card product-item border-0 mb-4">
+                                    <div class="card-header position-relative overflow-hidden bg-transparent border p-0">
+                                        <span class="badge bg-warning text-dark position-absolute rounded-0">Ново</span>
+                                        <img class="img-fluid w-100" src="img/product-9.jpg" alt="">
+                                    </div>
+                                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                                        <h6 class="text-truncate mb-3">Струни за електрическа китара Ernie Ball Cobalt</h6>
+                                        <div class="d-flex justify-content-center">
+                                            <h6>22.00 лв.</h6><h6 class="text-muted ml-2"><del>25.99 лв.</del></h6>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-between bg-light border">
+                                        <a href="" class="btn btn-sm text-dark p-0" data-toggle="modal" data-target="#product-9-ModalCenter"><i class="fas fa-eye text-primary mr-1"></i>Виж детайли</a>
+                                        <div class="modal fade" id="product-9-ModalCenter" tabindex="-1" role="dialog" aria-labelledby="product-9-ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" style="max-width: 1000px;" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header bg-primary">
+                                                        <h4 class="modal-title" id="product-9-ModalLongTitle">Продукт №361582</h4>
+                                                        <button type="button" class="close rounded-5" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <section class="py-5">
+                                                            <div class="container px-4 px-lg-5 my-5">
+                                                                <div class="row gx-4 gx-lg-5 align-items-center">
+                                                                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border" src="img/product-9.jpg" alt="..." /></div>
+                                                                    <div class="col-md-6">
+                                                                        <h1 class="display-5 fw-bolder">Струни за електрическа китара Ernie Ball Cobalt</h1>
+                                                                        <div class="fs-5 mb-2">
+                                                                            <span>22.00 лв.</span><span class="text-muted ml-2"><del>25.99 лв.</del></span>
+                                                                        </div>
+                                                                        <div><span class="font-weight-bold">Материал:</span>   Никел-кобалт</div>
+                                                                        <div><span class="font-weight-bold">Дължина:</span>   30 см</div>
+                                                                        <div><span class="font-weight-bold">Размер:</span>   2 мм</div>
+                                                                        <div><span class="font-weight-bold">Подходящ за:</span>  Електрическа китара</div>
+                                                                        <div class="d-flex mt-3">
+                                                                            <div class="d-flex">
+                                                                                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                                                                                <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                                                                <i class="bi-cart-fill me-1"></i>
+                                                                                Добави в количката
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                        <div class="modal-footer bg-primary py-4">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Добави в количката</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pb-1">
+                                    <nav aria-label="Page navigation">
+                                        <ul class="pagination justify-content-center mb-3">
+                                            <li class="page-item disabled">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                    <span class="sr-only">Previous</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                    <span class="sr-only">Next</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Край на продукти -->
+                    </div>
+                </div>
+                <!-- Край на съдържание с продукти -->
+                <!-- Начало на футър -->
+                <div class="container-fluid bg-secondary text-dark mt-5 pt-3">
+                    <div class="row px-xl-5 pt-5">
+                        <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                            <a href="" class="text-decoration-none">
+                                <h1 class="mb-4 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold mr-2">Dream</span>Guitar Center</h1>
+                            </a>
+                            <p>Свържете се с нас:</p>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>гр. София, бул. "Патриарх Евтимий" №98</p>
+                            <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@dream-guitarcenter.com</p>
+                            <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+359 88 234411</p>
+                        </div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="row">
+                                <div class="col-md-4 mb-5">
+                                    <h5 class="font-weight-bold text-dark mb-4">Бързи връзки</h5>
+                                    <div class="d-flex flex-column justify-content-start">
+                                        <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Начало</a>
+                                        <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Помощ</a>
+                                        <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Контакти</a>
+                                        <a class="text-dark mb-2" href="contact.html"><i class="fa fa-angle-right mr-2"></i>ЧЗВ</a>
+                                        <a class="text-dark" href="aboutus.html"><i class="fa fa-angle-right mr-2"></i>За нас</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 mb-5">
+                                    <h5 class="font-weight-bold text-dark mb-4">Бъдете информирани за последните новини, промоции и продукти</h5>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control border-0 py-4" placeholder="Вашето име" required="required" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control border-0 py-4" placeholder="Вашият имейл"
+                                            required="required" />
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary btn-block border-0 py-3" type="submit">Запиши ме</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-md-2 text-md-left text-dark">
+                            &copy; <span class="text-dark font-weight-semi-bold" href="#">2022 Dream Guitar Center</span>. Всички права запазени.
+                        </p>
+                    </div>
+                </div>
+                <!-- Край на футър -->
+                <!-- Бутон за връщане най-горе в страницата -->
+                <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+                <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+                <script src="js/main.js"></script>
+            </body>
+        </html>
